@@ -1,0 +1,67 @@
+Prefix: '&e[&aBottledExp&e] '
+Nopermission: '&4У вас нет прав на это!'
+NoPlayer: '&4Не могу найти игрока с таким именем!'
+MoreThanZero: '&4Укажите число больше 0'
+Self: '&4Вы не можете отправить exp для себя!'
+Reload: '&eФайлы конфигурации перезагружены!'
+Enchant: '&2Вы потратили &3[xp] &2xp на зачарование'
+GotExp: '&2У вас есть &3[xp] &2xp'
+Store:
+  Name: '&6|   &aКонсервированный опыт   &6|'
+  Lore: '&bХранимый опыт в бутылках:'
+  ExpLoreColor: '&6'
+command:
+  help:
+    output:
+      usage: '&eИспользуйте: &6%usage%'
+      title: '&2----&e ==== &6BottledExp &e==== &2----'
+  stats:
+    help:
+      info: '&2Проверка информации об exp'
+      args: '&3(playername)'
+    info:
+      feedback:
+      - '&2У вас в есть  &3[xp] &2xp и ваш уровень &3[level]&2!'
+      - '&2Вам нужно &3[xpdelta] &2xp или &3[bottles] &2бутылки  для следующего уровня!'
+      Moneyfeedback: '&2Это будет стоить вам &3[money]'
+  until:
+    help:
+      info: '&2Проверьте, сколько бутылок вам нужно для достижения уровня'
+      args: '[level]'
+    info:
+      moreThan: '&4Это должно быть больше, чем ваш уровень!'
+      feedback: '&2Вам нужно &3[xp] &2xp или &3[bottles] &2бутылки для достижения
+        &3[level] &2уровня'
+      Moneyfeedback: '&2Это будет стоить вам &3[money]'
+  give:
+    help:
+      info: '&2Дать exp другому игроку'
+      args: '[playername] [exp]'
+    info:
+      noExp: '&4У вас недостаточно опыта, чтобы дать &2xp'
+      sender: '&2Вы передали &3[amount] &2xp игроку &3[name] &2и &3[lost] &2xp потеряли
+        во время передачи'
+      receiver: '&2Вы получили &3[amount] &2xp от &3[name] &2и &3[lost] &2xp потеряли
+        во время передачи'
+  eblock:
+    help:
+      info: '&2Создает блок обмена exp, на который вы смотрите.'
+      args: ''
+    info:
+      created: '&6Создан'
+      removed: '&eУдален'
+  reload:
+    help:
+      info: '&2Обновить файлы конфигурации'
+      args: ''
+  get:
+    help:
+      info: '&2Обмен ехр на ехр бутылки'
+      args: '[amount] или макс.'
+    info:
+      noExp: '&4У вас не хватает опыта'
+      NoMoney: '&4У вас недостаточно денег!'
+      NoItems: '&4У вас не хватает предметов!'
+      Refund: '&2Возврат средств! Количество: &3[amount]'
+      Cost: '&eСтоимость сделки: &3[cost]'
+      Order: '&2Вы получили: &3[bottles] &2бутылку!'
